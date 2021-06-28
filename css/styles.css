@@ -43,9 +43,25 @@ ul {
 .myLi {
     display: flex;
     justify-content: space-between;
+    font-size: 20px;
 }
 
 .xbutton {
     background: red;
     cursor: pointer;
+    display: inline;
+}
+
+.doneBtn {
+    background: green;
+    cursor: pointer;
+    display: inline;
+}
+
+.btnWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    /* height: 20px; */
+    background: #def;
 }

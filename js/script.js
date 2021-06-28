@@ -9,16 +9,33 @@ addBtn.addEventListener("click", function addItemFn() {
     const listItemText = document.createTextNode(myInput.value);
     listItem.appendChild(listItemText);
 
+    
+
+    // done
+    const done = document.createElement('div');
+    const doneText = document.createTextNode('Done');
+    done.appendChild(doneText);
+    listItem.appendChild(done);
+
+    
+
     // X button
     const x = document.createElement('div');
     const xText = document.createTextNode('X');
     x.appendChild(xText);
     listItem.appendChild(x);
 
+    // button wrapper
+    const btnWrapper = document.createElement('div');
+    btnWrapper.appendChild(x);
+    btnWrapper.appendChild(done);
+    listItem.appendChild(btnWrapper);
+
     // styles
     x.classList.add('xbutton');
     listItem.classList.add('myLi');
-
+    done.classList.add('doneBtn')
+    btnWrapper.classList.add('btnWrapper')
     // append to UL
     myUl.appendChild(listItem);
 
@@ -27,17 +44,26 @@ addBtn.addEventListener("click", function addItemFn() {
         myInput.value = "";
     }
 
-    if (listItem.textContent === 'X') {
+    if (listItem.innerHTML === `<div class="btnWrapper"><div class="xbutton">X</div><div class="doneBtn">Done</div></div>`) {
         listItem.remove();
     }
 
     // console.log(listItem.innerHTML);
+    console.log(listItemText);
     
    
     // close List item
     x.addEventListener("click", function() {
         listItem.remove();
     })
+    // done List item
+    done.addEventListener("click", function lineThroughFn(e) {
+        // listItem.style.textDecoration = 'line-through';
+        // x.style.textDecoration = 'none';
+        e.style.textDecoration = 'line-through';
+        
+    })
+    lineThroughFn(listItemText);
 })
 
 
