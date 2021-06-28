@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* !Class and ID */
+
+.headline {
+    text-align: center;
+    padding: 10vh 0;
+}
+
+.list-container {
+    width: 100%;
+    margin: auto;
+    max-width: 300px;
+}
+
+.input-and-button {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-and-button input {
+    width: 75%;
+    padding: 5px 0;
+}
+
+.input-and-button button {
+    width: 20%;
+}
+
+.myLi {
+    display: flex;
+    justify-content: space-between;
+}
+
+.xbutton {
+    background: red;
+    cursor: pointer;
+}
