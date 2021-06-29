@@ -57,13 +57,10 @@ addBtn.addEventListener("click", function addItemFn() {
         listItem.remove();
     })
     // done List item
-    done.addEventListener("click", function lineThroughFn(e) {
-        // listItem.style.textDecoration = 'line-through';
-        // x.style.textDecoration = 'none';
-        e.style.textDecoration = 'line-through';
+    done.addEventListener("click", function () {
+        listItem.style.textDecoration = 'line-through';
         
     })
-    lineThroughFn(listItemText);
 })
 
 
