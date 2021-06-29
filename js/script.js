@@ -62,7 +62,3 @@ addBtn.addEventListener("click", function addItemFn() {
         
     })
 })
-
-
-
-document.body.contentEditable = 'true'; document.designMode='on'; void 0
